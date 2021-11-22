@@ -2,7 +2,12 @@
 Dit is een app die je kunt gebruiken om competities
 te hosten.
 
+Bouw de dockerimage
 
+`<acr-name>.azurecr.io/<image-name>/<tag>`
+`cokehaven.azurecr.io/cokehavenimage/v1.0`
+`docker build -t cokehaven.azurecr.io/cokehavenimage:v1.0 .`
+`docker push cokehaven.azurecr.io/cokehavenimage:v1.0`
 
 
 ## Vaag idee om mee te beginnen.
