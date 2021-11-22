@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+      <form action = "/submit" method = "POST" enctype = "multipart/form-data">
+         <h3>Submission</h3>
+          Voer je teamnaam in, eventueel een opmerking en geef een csv bestand op. <br>
+         <br>Teamnaam:
+         <input type = "text" name = "team_naam" required="True"/></br>
+         Opmerking, (misschien handig voor jezelf)
+         <input type = "opmerking" name = "opmerking" /><br>
+        <input type="file" name="file" required="True"/> <br>
+         <input type = "submit" value = "dien in" /><br>
+      </form>
+<br>
+<a href = "/">ga terug naar het overzicht</a>
+{% endblock %}
