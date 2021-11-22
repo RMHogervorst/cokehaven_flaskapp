@@ -12,7 +12,7 @@ def insert_into_db(kilos, streetworth, team_naam, opmerking):
             # submissions (team_naam TEXT, kilos INT, straatwaarde INT, opmerking TEXT)')
             cur.execute(
                 "INSERT INTO submissions (team_naam,kilos,straatwaarde,opmerking) VALUES(?, ?, ?, ?);",
-                (team_naam,int(kilos),int(streetworth),opmerking) ) # je moet dit klaarblijkelijk ech heel erg willen als int.
+                (team_naam,int(kilos),streetworth,opmerking) ) # je moet dit klaarblijkelijk ech heel erg willen als int.
             con.commit()
             msg = "Score successvol toegevoegd"
             logger.info(msg)
@@ -29,7 +29,7 @@ def create_database():
     conn = connect('database.db')
     logger.info("database succesvol geopend.")
     # team_naam, kilos, straatwaarde, opmerking
-    conn.execute('CREATE TABLE submissions (team_naam TEXT, kilos INTEGER, straatwaarde INTEGER, opmerking TEXT)')
+    conn.execute('CREATE TABLE submissions (team_naam TEXT, kilos INTEGER, straatwaarde TEXT, opmerking TEXT)')
     logger.info("Table created successfully")
     conn.execute('CREATE INDEX {ix} on {tn}({cn})'.format(ix="score_idx", tn="submissions", cn="kilos"))
     logger.info("created index")

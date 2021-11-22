@@ -33,3 +33,8 @@ def test_merge_submission(example_submission):
 def test_score(example_submission):
     result = data_manip.score_file(data_manip.merge_submission(example_submission))
     assert result == 7
+
+
+def test_turn_to_streetworth():
+    result = data_manip.turn_to_streetworth(1)
+    assert result == "€50.000"

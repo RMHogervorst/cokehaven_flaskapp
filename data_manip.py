@@ -32,6 +32,7 @@ def score_file(merged_df: pd.DataFrame) -> int:
     return result
 
 
-def turn_to_streetworth(kilos: int) -> int:
+def turn_to_streetworth(kilos: int) -> str:
     """A gram is 50 euros, so 1000g is 50000 euros"""
-    return kilos * 50000
+    currency_string = "€{:,}".format(kilos * 50000).replace(',', '.')
+    return currency_string
