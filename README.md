@@ -14,7 +14,7 @@ Bouw de dockerimage
 * testset container ids plus indices en kilos
 
 * hoofdpagina is live scorebord (sqlite backend)
-	* er zitten al twee scores in: random keuze uit alle containers en op basis van 			 	 profilering (300 op basis van zuid amerika, fruit, en 100 random)
+	* er zitten al 1 score in: op basis van  profilering (300 op basis van zuid amerika, fruit, en 100 random)
 	* scores worden uitgedrukt in straatwaarde 
 * upload is aparte pagina:  csv knop, teamnaam, opmerkingen
 	* ontvang csv, tel rijen met predictions keur af bij minder dan 400 of meer dan
